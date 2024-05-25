@@ -1,0 +1,8 @@
+<div class="top-nav">
+    <a class="login" (click)="navigateToLogin()">Login</a>
+    <a class="signup" (click)="navigateToSignUp()">Signup</a>
+    <div class="search-container">
+        <input #searchBar class="search-bar" type="search" placeholder="Music, Artists, or Podcasts"
+                  (keyup)="filterSongs(searchBar.value)">
+    </div>
+</div>

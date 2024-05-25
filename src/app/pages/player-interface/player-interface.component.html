@@ -1,0 +1,20 @@
+<div class="player-interface-container">
+  <a (click)="closePlayer.emit()" class="close-button">
+    <img title="Close" src="assets/closelogo.png" alt="Close">
+  </a>
+    <div class="player-interface-form">
+      <h2>{{ currentSong.title }}</h2>
+      <div class="input-group">
+        <img class="song-poster" src="{{ currentSong.poster }}" alt="{{ currentSong.title }}">
+      </div>
+      <audio #audioPlayer [src]="currentSong.audioPath"></audio>
+      <div class="controls">
+        <a (click)="play()">
+          <img title="Play" class="play-button" src="assets/play_button_image_control.png" alt="Play Button">
+        </a>
+        <a (click)="pause()">
+          <img title="Play" class="pause-button" src="assets/pause_button_image_control.png" alt="Pause Button">
+        </a>
+      </div>
+    </div>
+  </div>

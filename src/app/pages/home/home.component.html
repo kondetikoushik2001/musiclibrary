@@ -1,0 +1,23 @@
+<div class="music_home_container">
+    <div class="music_left_bar col-2">
+    <div class="music_icon">
+    <img width="200" src="assets\LOGO1.png" alt="MUSIC LOGO">
+    </div>
+    <div class="music_left_items">
+    <a (click) = 'navigateToHome()'>Home</a>
+    </div>
+    <div class="music_left_items">
+    <a routerLink = '#' (click)="topNav.focusSearchBar()">Search</a>
+    </div>
+    <div class="music_left_items">
+    <a (click) = 'navigateToLogin()'>Favourites</a>
+    </div>
+    </div>
+    <div class="music_right_bar col-10">
+        <app-top-navigation (searchTextChanged)="filterSongs($event)"></app-top-navigation>
+        <div class="music_top_bar mt-5 container"></div>
+        <app-song-card *ngFor="let song of filteredSongs" [song]="song" (playClicked)="onPlayClicked(song)"></app-song-card>
+        <div class = "player-container col-10"></div>
+        <app-player-interface *ngIf="showPlayer && currentSong" [currentSong]="currentSong" (closePlayer)="showPlayer = false"></app-player-interface>
+    </div>
+    </div>

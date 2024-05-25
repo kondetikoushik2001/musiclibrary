@@ -1,0 +1,11 @@
+<div class="song-card">
+    <div class="poster-wrapper">
+    <img class="song-poster" src="{{ song.poster }}" alt="{{ song.title }}">
+    <img title = "Play" class="play-button" src="assets/play_button_image.png" alt="Play Button" routerLink = 'player-interface' (click) = "onPlayClicked()" >
+    <img title = "Add to Favorites" class="fav-button" src="assets/fav_button_image.png" alt="Favorites Button">
+    </div>
+    <div class="song-info">
+    <h3 class="song-title">{{ song.title }}</h3>
+    <p class="song-movie">{{ song.movie }}</p> 
+    </div>
+    </div>
